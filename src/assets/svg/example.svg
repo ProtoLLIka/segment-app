@@ -1,0 +1,26 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+    <g class="auditory 111">
+        <rect x="0" y="0" width="72" height="72" fill="red" />
+        <circle cx="60" cy="60" r="50" fill="orange" />
+    </g>
+    <g class="auditory 222">
+        <rect x="100" y="100" width="72" height="72" fill="red" />
+        <circle cx="160" cy="160" r="50" fill="orange" />
+    </g>
+    <g class="auditory 222">
+        <rect x="200" y="200" width="72" height="72" fill="red" />
+        <circle cx="160" cy="160" r="50" fill="orange" />
+    </g>
+    <g class="auditory 222">
+        <rect x="300" y="300" width="72" height="72" fill="red" />
+        <circle cx="160" cy="160" r="50" fill="orange" />
+    </g>
+    <g class="auditory 222">
+        <rect x="400" y="400" width="72" height="72" fill="red" />
+        <circle cx="160" cy="160" r="50" fill="orange" />
+    </g>
+    <g class="auditory 222">
+        <rect x="500" y="500" width="72" height="72" fill="red" />
+        <circle cx="160" cy="160" r="50" fill="orange" />
+    </g>
+</svg>
