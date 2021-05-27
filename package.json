@@ -1,9 +1,13 @@
 {
+  "homepage": "http://ProtoLLIka.github.io/segment-app",
   "name": "ulstu-map",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --config webpack.dev.js --progress --profile --content-base src/"
+    "dev": "webpack serve --config webpack.dev.js --progress --profile --content-base src/",
+    "build": "webpack --config webpack.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
