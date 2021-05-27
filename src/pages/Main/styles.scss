@@ -1,8 +1,6 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
-
-img {
-  max-width: 100%;
+.hidden {
+  opacity: 0;
+  position: absolute;
+  bottom: -10000px;
+  left: -10000px;
 }

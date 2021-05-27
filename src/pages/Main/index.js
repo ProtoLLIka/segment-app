@@ -1,3 +1,3 @@
-import Page from './view';
+import Page from './connector';
 
 export default Page;
