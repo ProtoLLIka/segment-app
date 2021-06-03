@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
@@ -74,6 +75,9 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './template/index.html',
+    }),
+    new webpack.DefinePlugin({
+      API_URL: JSON.stringify(process.env.API_URL || 'http://localhost:3000/'),
     }),
   ],
 };

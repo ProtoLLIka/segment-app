@@ -12,7 +12,7 @@ const View = ({ zip }) => (
   <div>
     <button
       onClick={() => {
-        dowloadArchive(zip);
+        sendImage();
       }}
     >
       Скачать

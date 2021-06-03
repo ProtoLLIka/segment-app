@@ -27,6 +27,6 @@ module.exports = {
     'consistent-return': 'off',
   },
   globals: {
-    i18n: 'readonly',
+    API_URL: 'readonly',
   },
 };

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import sendImage from 'api/sendImage';
+
 const selectFileHandler = (files, setLoadedImage) => {
   if (files && files.length > 0) {
     const reader = new FileReader();
@@ -13,7 +15,7 @@ const View = ({ setLoadedImage }) => (
     type="file"
     accept="image/*"
     onChange={({ target: { files } }) => {
-      selectFileHandler(files, setLoadedImage);
+      sendImage(files);
     }}
   />
 );
