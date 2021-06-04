@@ -8,6 +8,7 @@ import ParseButton from 'components/ParseButton';
 import InputFileButton from 'components/InputFileButton';
 import FileLabel from 'components/FileLabel';
 import Loader from 'components/Loader';
+import SegmentInput from 'components/SegmentInput';
 
 import styles from './styles.scss';
 
@@ -144,6 +145,7 @@ const View = ({
         height={cropImageSize}
       />
       <FileLabel />
+      <SegmentInput />
       <ParseButton />
       <DownloadButton zip={zip} />
       <Loader />

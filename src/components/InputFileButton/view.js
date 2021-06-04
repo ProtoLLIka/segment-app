@@ -17,13 +17,6 @@ const selectFileHandler = ({ files, setLoadedImage, setFileInfo }) => {
 
 const View = ({ setLoadedImage, setFileInfo }) => (
   <div className={styles.dropzone}>
-    {/* <input
-      type="file"
-      accept="image/*"
-      onChange={({ target: { files } }) => {
-        selectFileHandler(files, setLoadedImage);
-      }}
-    /> */}
     <Dropzone
       onDrop={(acceptedFiles) => {
         selectFileHandler({ files: acceptedFiles, setLoadedImage, setFileInfo });

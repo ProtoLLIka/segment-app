@@ -1,0 +1,44 @@
+.container {
+}
+
+.button {
+    border: none;
+    outline: none;
+    background: green;
+    width: 40px;
+    height: 36px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input {
+    height: 30px;
+    margin-right: 5px;
+    font-size: 25px;
+    width: 200px;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 30px;
+
+    & > span {
+        display: block;
+        padding-top: 6px;
+    }
+}
+
+.value {
+    font-size: 25px;
+    padding-top: 0px !important;
+    margin-left: 10px;
+}
+
+.block2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
