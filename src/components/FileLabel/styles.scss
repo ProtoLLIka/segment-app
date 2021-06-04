@@ -1,0 +1,18 @@
+.block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+}
+
+.name {
+  display: block;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.size {
+  display: block;
+  font-size: 25px;
+  color: grey;
+}

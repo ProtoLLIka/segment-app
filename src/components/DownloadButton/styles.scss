@@ -1,0 +1,15 @@
+.btn {
+  border: none;
+  outline: none;
+  background: green;
+  width: 100px;
+  height: 30px;
+  color: white;
+  border-radius: 5px;
+
+  &:disabled {
+    cursor: not-allowed;
+    background: rgb(61, 82, 61);
+    color: rgba(255, 255, 255, 0.295);
+  }
+}

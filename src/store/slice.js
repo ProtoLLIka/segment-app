@@ -7,8 +7,9 @@ const initialState = {
   y: 0,
   picWidth: null,
   picHeight: null,
-  cropImageSize: 100,
+  cropImageSize: 50,
   isParsing: null,
+  fileInfo: null,
 };
 
 const reducers = {
@@ -33,6 +34,9 @@ const reducers = {
   },
   setIsParsing(state, { payload: isParsing }) {
     state.isParsing = isParsing;
+  },
+  setFileInfo(state, { payload: fileInfo }) {
+    state.fileInfo = { ...fileInfo };
   },
 };
 

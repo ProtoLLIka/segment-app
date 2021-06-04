@@ -1,0 +1,35 @@
+.dropzone {
+  width: 400px;
+  height: 200px;
+  background-color: rgb(175, 175, 175);
+  border: 3px dashed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+
+  &:hover {
+    background-color: rgb(209, 207, 207);
+  }
+
+  & > section > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  & > section > div > p {
+    text-align: center;
+  }
+
+  & > section {
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+}
