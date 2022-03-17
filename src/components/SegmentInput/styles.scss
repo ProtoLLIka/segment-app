@@ -1,15 +1,22 @@
+@import "~styles/colors";
+
 .container {
 }
 
 .button {
+    cursor: pointer;
+    color: $white;
     border: none;
     outline: none;
-    background: green;
-    width: 40px;
-    height: 36px;
-    color: white;
     border-radius: 5px;
-    cursor: pointer;
+    background-color: $purple4;
+    font-size: 15px;
+    width: fit-content;
+    height: 30px;
+
+    &:hover {
+        background-color: $purple5;
+    }
 }
 
 .input {
@@ -39,6 +46,7 @@
 
 .block2 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
 }

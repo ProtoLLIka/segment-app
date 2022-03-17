@@ -1,16 +1,22 @@
+@import "~styles/colors";
+
 .dropzone {
-  width: 400px;
-  height: 200px;
-  background-color: rgb(175, 175, 175);
-  border: 3px dashed;
+  width: 540px;
+  height: 260px;
+  background-color: $white;
+  border: 3px dashed $purple0;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   font-size: 20px;
+  transition: 0.3s;
+  color: #69779b;
+  cursor: auto;
 
   &:hover {
-    background-color: rgb(209, 207, 207);
+    background-color: $purple2;
+    border-color: $purple3;
   }
 
   & > section > div {
@@ -26,11 +32,27 @@
 
   & > section {
     width: 100%;
-    cursor: pointer;
   }
 }
 
 .img {
   width: 100px;
   height: 100px;
+}
+
+.loadButton {
+  cursor: pointer;
+  color: $white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: $purple4;
+  font-size: 20px;
+  width: 163px;
+  height: 44px;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: $purple5;
+  }
 }

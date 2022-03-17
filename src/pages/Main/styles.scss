@@ -1,11 +1,27 @@
-.container {
-  width: 100%;
+@import "~styles/colors";
+
+.layout {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  height: 355px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 30px 10px;
+  background-color: $purple5;
+}
+
+.container {
+  width: 1300px;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  background-color: $white;
+  -webkit-box-shadow: 0px 5px 21px 2px $black_04;
+  -moz-box-shadow: 0px 5px 21px 2px $black_04;
+  box-shadow: 0px 5px 21px 2px $black_04;
+  overflow: hidden;
 }
 
 .hidden {

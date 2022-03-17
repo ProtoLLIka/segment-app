@@ -1,8 +1,6 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
 
-import cloudImage from 'assets/png/cloud.png';
-
 import styles from './styles.scss';
 
 const selectFileHandler = ({ files, setLoadedImage, setFileInfo }) => {
@@ -26,8 +24,9 @@ const View = ({ setLoadedImage, setFileInfo }) => (
         <section>
           <div {...getRootProps()}>
             <input {...getInputProps()} />
-            <p>Drag drop some files here, or click to select files</p>
-            <img className={styles.img} src={cloudImage} alt="upload" />
+            <p>Drag & drop your files here </p>
+            <span>OR</span>
+            <button className={styles.loadButton}>Browse File</button>
           </div>
         </section>
       )}

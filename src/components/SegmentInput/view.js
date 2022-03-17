@@ -9,7 +9,32 @@ const View = ({ cropImageSize, setCropImageSize, value, setValue }) => (
       <span className={styles.value}>{`${cropImageSize}px`}</span>
     </div>
     <div className={styles.block2}>
-      <input
+      <button
+        className={styles.button}
+        onClick={() => {
+          setCropImageSize(50);
+        }}
+      >
+        50px
+      </button>
+
+      <button
+        className={styles.button}
+        onClick={() => {
+          setCropImageSize(100);
+        }}
+      >
+        100px
+      </button>
+      <button
+        className={styles.button}
+        onClick={() => {
+          setCropImageSize(150);
+        }}
+      >
+        150px
+      </button>
+      {/* <input
         className={styles.input}
         value={value}
         onChange={({ target: { value: typingValue } }) => {
@@ -23,7 +48,7 @@ const View = ({ cropImageSize, setCropImageSize, value, setValue }) => (
         }}
       >
         OK
-      </button>
+      </button> */}
     </div>
   </div>
 );

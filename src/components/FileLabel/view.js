@@ -19,7 +19,7 @@ const View = ({ fileInfo }) => {
   return (
     <div className={styles.block}>
       <span className={styles.name}>{name}</span>
-      <span className={styles.size}>{calcSize}</span>
+      <span className={styles.size}>{`(${calcSize})`}</span>
     </div>
   );
 };

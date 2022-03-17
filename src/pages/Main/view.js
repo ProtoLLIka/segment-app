@@ -3,12 +3,9 @@ import ReactCrop from 'react-image-crop';
 import JSZip from 'jszip';
 import 'react-image-crop/dist/ReactCrop.css';
 
-import DownloadButton from 'components/DownloadButton';
-import ParseButton from 'components/ParseButton';
 import InputFileButton from 'components/InputFileButton';
-import FileLabel from 'components/FileLabel';
-import Loader from 'components/Loader';
-import SegmentInput from 'components/SegmentInput';
+import PicPreview from 'components/PicPreview';
+import DropIntefase from 'components/DropIntefase';
 
 import styles from './styles.scss';
 
@@ -122,33 +119,37 @@ const View = ({
   crop.y = y;
 
   return (
-    <div className={styles.container}>
-      <InputFileButton setLoadedImage={setLoadedImage} />
-      <ReactCrop
-        className={styles.hidden}
-        src={loadedImage}
-        onImageLoaded={(img) => {
-          imgRef.current = img;
-        }}
-        crop={{ ...crop, x: 100, y: 100 }}
-        onChange={(cropedImage) => {
-          setCrop({ ...cropedImage, x, y });
-        }}
-        onComplete={(cropedImage) => {
-          setCompletedCrop({ ...cropedImage, x, y });
-        }}
-      />
-      <canvas
-        ref={previewCanvasRef}
-        className={styles.hidden}
-        width={cropImageSize}
-        height={cropImageSize}
-      />
-      <FileLabel />
-      <SegmentInput />
-      <ParseButton />
-      <DownloadButton zip={zip} />
-      <Loader />
+    <div className={styles.layout}>
+      <div className={styles.container}>
+        {!loadedImage ? (
+          <InputFileButton setLoadedImage={setLoadedImage} />
+        ) : (
+          <>
+            <ReactCrop
+              className={styles.hidden}
+              src={loadedImage}
+              onImageLoaded={(img) => {
+                imgRef.current = img;
+              }}
+              crop={{ ...crop, x: 100, y: 100 }}
+              onChange={(cropedImage) => {
+                setCrop({ ...cropedImage, x, y });
+              }}
+              onComplete={(cropedImage) => {
+                setCompletedCrop({ ...cropedImage, x, y });
+              }}
+            />
+            <canvas
+              ref={previewCanvasRef}
+              className={styles.hidden}
+              width={cropImageSize}
+              height={cropImageSize}
+            />
+            <DropIntefase zip={zip} />
+            <PicPreview image={loadedImage} />
+          </>
+        )}
+      </div>
     </div>
   );
 };
