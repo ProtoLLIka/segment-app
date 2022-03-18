@@ -12,12 +12,13 @@ import styles from './styles.scss';
 const zip = new JSZip();
 
 const getCropImagerСoordinates = ({ x, y, picWidth, picHeight, cropImageSize, setIsParsing }) => {
+  const step = 30;
   if (x <= picWidth - cropImageSize) {
-    return { x: x + cropImageSize, y };
+    return { x: x + cropImageSize - step, y };
   }
 
   if (y <= picHeight - cropImageSize) {
-    return { x: 0, y: y + cropImageSize };
+    return { x: 0, y: y + cropImageSize - step };
   }
 
   setIsParsing(false);
