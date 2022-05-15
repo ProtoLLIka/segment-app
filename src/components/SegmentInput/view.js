@@ -10,6 +10,7 @@ const View = ({ cropImageSize, setCropImageSize, value, setValue }) => (
     </div>
     <div className={styles.block2}>
       <button
+        disabled
         className={styles.button}
         onClick={() => {
           setCropImageSize(50);
@@ -19,6 +20,7 @@ const View = ({ cropImageSize, setCropImageSize, value, setValue }) => (
       </button>
 
       <button
+        disabled
         className={styles.button}
         onClick={() => {
           setCropImageSize(100);
@@ -27,6 +29,7 @@ const View = ({ cropImageSize, setCropImageSize, value, setValue }) => (
         100px
       </button>
       <button
+        disabled
         className={styles.button}
         onClick={() => {
           setCropImageSize(150);

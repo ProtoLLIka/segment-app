@@ -7,7 +7,7 @@ const initialState = {
   y: 0,
   picWidth: null,
   picHeight: null,
-  cropImageSize: 100,
+  cropImageSize: 256,
   isParsing: null,
   fileInfo: null,
 };

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import ReactCrop from 'react-image-crop';
 import JSZip from 'jszip';
 import 'react-image-crop/dist/ReactCrop.css';
+import { v4 as uuidv4 } from 'uuid';
 
 import InputFileButton from 'components/InputFileButton';
 import PicPreview from 'components/PicPreview';
@@ -29,17 +30,9 @@ const addFile = (canvas, crop) => {
   if (!crop || !canvas) {
     return null;
   }
+  const fileName = uuidv4();
 
-  canvas.toBlob(
-    (blob) => {
-      const { files: archiveFiles } = zip;
-      const archiveFilesCount = Object.keys(archiveFiles).length;
-
-      zip.file(`${archiveFilesCount}.png`, blob);
-    },
-    'image/png',
-    1,
-  );
+  canvas.toBlob((blob) => zip.file(`${fileName}/${fileName}.png`, blob), 'image/png', 1);
 
   return null;
 };
